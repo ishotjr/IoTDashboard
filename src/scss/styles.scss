@@ -1,0 +1,116 @@
+// --------------------------------------------------
+// 		Imports
+// --------------------------------------------------
+@import "mixins";
+
+// --------------------------------------------------
+// 		Variables
+// --------------------------------------------------
+$line-height: 1.5;
+
+// --------------------------------------------------
+// 		Colour palette
+// --------------------------------------------------
+$link-colour: #fff;
+$link-hover-colour: #fff;
+
+$main-colour: #fff;
+
+// --------------------------------------------------
+// 		Basics
+// --------------------------------------------------
+html, body, .container {
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: $main-colour;
+	color: #333;
+	font-family: sans-serif;
+	@include font-size(1.6);
+	line-height: $line-height;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: $link-colour;
+}
+a:hover {
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+}
+
+// --------------------------------------------------
+// 		Modules
+// --------------------------------------------------
+.dashboard {
+	margin: 0.5em;
+
+	@include clearfix();
+}
+.module {
+	border: 1px solid #ddd;
+	float: left;
+	margin: 0.5em;
+	position: relative; // To position message after.
+	text-align: center;
+	width: 200px;
+
+	&__title {
+		line-height: 1;
+		height: 25px;
+		margin: 0;
+		padding: 0.5em 0;
+	}
+	&__content {
+		height: 250px;
+	}
+	&--flash {
+		background: #fff !important;
+		color: #333 !important;
+	}
+
+	&:after {
+		color: #bfbfbf;
+		content: 'Connecting...';
+		display: block;
+		left: 0%;
+		position: absolute;
+		top: 45%;
+		width: 100%;
+	}
+	&.loaded {
+		&:after {
+			content: '';
+		}
+	}
+
+	-webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+}
+
+@import "room-temp";
+
+// --------------------------------------------------
+// 		Font
+// --------------------------------------------------
+@import "../fonts/typicons";
+
+// --------------------------------------------------
+// 		Screen Readers
+// --------------------------------------------------
+.screen-reader-text {position: absolute; left: -9000px;}

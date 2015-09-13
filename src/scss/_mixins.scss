@@ -1,0 +1,37 @@
+// --------------------------------------------------
+//      Mixins
+// --------------------------------------------------
+@mixin clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin clearfix2 {
+	&:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height: 0;
+	}
+}
+
+@mixin font-size($size: 1.6) {
+	font-size: ($size * 10) + px;
+	font-size: $size + rem;
+}
+
+@mixin transition($effect) {
+	-webkit-transition: $effect;
+	-moz-transition: $effect;
+	-o-transition: $effect;
+	transition: $effect;
+}

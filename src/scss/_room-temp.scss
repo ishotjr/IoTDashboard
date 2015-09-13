@@ -1,0 +1,19 @@
+.module--room-temperature {
+	color: #fff;
+
+	&.is-cold {
+		background-color: #8debff;
+	}
+	&.is-comfy {
+		background-color: #40d54b;
+	}
+	&.is-hot {
+		background-color: #ec5106;
+	}
+}
+
+.thermometer {
+	&__temp {
+		font-size: 4em;
+	}
+}

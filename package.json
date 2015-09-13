@@ -1,0 +1,27 @@
+{
+  "name": "IoTDashboard",
+  "version": "0.0.1",
+  "author": "Patrick Catanzariti",
+  "description": "A JavaScript powered dashboard for the IoT",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.2",
+    "http": "0.0.0",
+    "jquery": "^2.1.1",
+    "path": "^0.4.9",
+    "socket.io": "^1.2.0",
+    "socket.io-client": "^1.2.0",
+    "underscore": "1.6.x"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "gulp": "3.7.0",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-notify": "^2.0.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.2.4",
+    "gulp-util": "^3.0.1",
+    "vinyl-source-stream": "latest",
+    "watchify": "latest"
+  }
+}
