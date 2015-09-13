@@ -1,0 +1,11 @@
+{
+  "name": "ArduinoControl",
+  "version": "0.0.0",
+  "description": "A small library for connecting to our Arduino",
+  "main": "arduino-control.js",
+  "author": "Patrick Catanzariti",
+  "license": "ISC",
+  "dependencies": {
+    "johnny-five": "^0.8.26"
+  }
+}

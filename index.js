@@ -23,8 +23,8 @@ app.use(express.static(__dirname + '/public'));
 /* ---------------------------------------------------
  *  Modules
  * --------------------------------------------------- */
-var deviceControl = require('./modules/device-control/device-control.js');
-deviceControl(app, io);
+var arduinoControl = require('./modules/arduino-control/arduino-control.js');
+arduinoControl(app, io);
 
 /* ---------------------------------------------------
  *  Global routing
